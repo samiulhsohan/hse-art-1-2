@@ -1,0 +1,424 @@
+:root {
+  --color-bg: #000;
+  --color-green: #00e55c;
+  --color-violet: #7000fe;
+  --color-red: #ff064d;
+  --color-pink: #ff00d6;
+  --color-yellow: #ffce53;
+  --color-blue: #00238b;
+  --color-grid: #fff;
+  --column-border: 3px;
+  --bg-invert: #fff;
+  font-size: 10px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: Sofia Pro, sans-serif;
+}
+
+html {
+  background-color: var(--color-bg);
+}
+
+.bg-green {
+  background-color: var(--color-green);
+}
+
+.bg-violet {
+  background-color: var(--color-violet);
+}
+
+.bg-red {
+  background-color: var(--color-red);
+}
+
+.bg-pink {
+  background-color: var(--color-pink);
+}
+
+.bg-yellow {
+  background-color: var(--color-yellow);
+}
+
+.bg-blue {
+  background-color: var(--color-blue);
+}
+
+.border-b {
+  border-bottom: var(--column-border) solid var(--color-grid);
+}
+
+.border-r {
+  border-right: var(--column-border) solid var(--color-grid);
+}
+
+.center,
+.container div,
+.m-container div {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.square {
+  aspect-ratio: 1/1;
+}
+
+.svg-invert {
+  fill: var(--bg-invert);
+}
+
+.pc {
+  display: none;
+}
+
+.center,
+.container div,
+.m-container div {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.container {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "logo logo logo six mode" "emo1 blank emo2 emo3 blank2" "text1 text1 bigEmo1 bigEmo1 two" "blank3 five bigEmo1 bigEmo1 emo4" "emo6 text2 blank4 emo7 blank5" "blank6 text2 four text3 text3" "three bigEmo2 bigEmo2 blank7 emo8" "blank9 bigEmo2 bigEmo2 one blank8";
+}
+
+.container img {
+  width: 100%;
+  max-width: 60%;
+}
+
+.container p {
+  color: var(--bg-invert);
+  font-size: 13rem;
+  font-weight: 700;
+}
+
+.container .loved {
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+
+.container .dice {
+  width: auto;
+  max-width: 50%;
+  -webkit-transition: -webkit-transform 0.6s ease;
+  transition: -webkit-transform 0.6s ease;
+  transition: transform 0.6s ease;
+  transition: transform 0.6s ease, -webkit-transform 0.6s ease;
+}
+
+.container .dice:hover {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.logo {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: logo;
+}
+
+.six {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+  grid-area: six;
+}
+
+.mode {
+  -ms-grid-row: 1;
+  -ms-grid-column: 5;
+  grid-area: mode;
+}
+
+.emo1 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: emo1;
+}
+
+.blank {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: blank;
+}
+
+.emo2 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: emo2;
+}
+
+.emo3 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 4;
+  grid-area: emo3;
+}
+
+.blank2 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 5;
+  grid-area: blank2;
+}
+
+.text1 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: text1;
+}
+
+.bigEmo1 {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-area: bigEmo1;
+}
+
+.two {
+  -ms-grid-row: 3;
+  -ms-grid-column: 5;
+  grid-area: two;
+}
+
+.emo4 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 5;
+  grid-area: emo4;
+}
+
+.five {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  grid-area: five;
+}
+
+.blank3 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: blank3;
+}
+
+.emo6 {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: emo6;
+}
+
+.text2 {
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  grid-area: text2;
+}
+
+.blank4 {
+  -ms-grid-row: 5;
+  -ms-grid-column: 3;
+  grid-area: blank4;
+}
+
+.emo7 {
+  -ms-grid-row: 5;
+  -ms-grid-column: 4;
+  grid-area: emo7;
+}
+
+.blank5 {
+  -ms-grid-row: 5;
+  -ms-grid-column: 5;
+  grid-area: blank5;
+}
+
+.text3 {
+  -ms-grid-row: 6;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 2;
+  grid-area: text3;
+}
+
+.four {
+  -ms-grid-row: 6;
+  -ms-grid-column: 3;
+  grid-area: four;
+}
+
+.blank6 {
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
+  grid-area: blank6;
+}
+
+.three {
+  -ms-grid-row: 7;
+  -ms-grid-column: 1;
+  grid-area: three;
+}
+
+.bigEmo2 {
+  -ms-grid-row: 7;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: bigEmo2;
+}
+
+.blank7 {
+  -ms-grid-row: 7;
+  -ms-grid-column: 4;
+  grid-area: blank7;
+}
+
+.emo8 {
+  -ms-grid-row: 7;
+  -ms-grid-column: 5;
+  grid-area: emo8;
+}
+
+.blank8 {
+  -ms-grid-row: 8;
+  -ms-grid-column: 5;
+  grid-area: blank8;
+}
+
+.one {
+  -ms-grid-row: 8;
+  -ms-grid-column: 4;
+  grid-area: one;
+}
+
+.blank9 {
+  -ms-grid-row: 8;
+  -ms-grid-column: 1;
+  grid-area: blank9;
+}
+
+.m-container {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(9, 1fr);
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "m-logo m-logo" "m-emo1 m-five" "m-six m-emo2" "m-emo3 m-emo3" "m-emo3 m-emo3" "m-text1 m-text1" "m-emo4 m-three" "m-four m-emo5" "m-emo6 m-emo7";
+}
+
+.m-container img {
+  width: 100%;
+  max-width: 60%;
+}
+
+.m-container p {
+  color: var(--bg-invert);
+  font-size: 10rem;
+  font-weight: 700;
+}
+
+.m-container .dice {
+  width: auto;
+  max-width: 50%;
+  -webkit-transition: -webkit-transform 0.6s ease;
+  transition: -webkit-transform 0.6s ease;
+  transition: transform 0.6s ease;
+  transition: transform 0.6s ease, -webkit-transform 0.6s ease;
+}
+
+.m-container .dice:hover {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.m-logo {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: m-logo;
+}
+
+.m-emo1 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: m-emo1;
+}
+
+.m-six {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: m-six;
+}
+
+.m-emo2 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: m-emo2;
+}
+
+.m-emo3 {
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: m-emo3;
+}
+
+.m-text1 {
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: m-text1;
+}
+
+.m-emo4 {
+  -ms-grid-row: 7;
+  -ms-grid-column: 1;
+  grid-area: m-emo4;
+}
+
+.m-three {
+  -ms-grid-row: 7;
+  -ms-grid-column: 2;
+  grid-area: m-three;
+}
+
+.m-four {
+  -ms-grid-row: 8;
+  -ms-grid-column: 1;
+  grid-area: m-four;
+}
+
+.m-emo5 {
+  -ms-grid-row: 8;
+  -ms-grid-column: 2;
+  grid-area: m-emo5;
+}
+
+.m-five {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: m-five;
+}
+
+.m-emo6 {
+  -ms-grid-row: 9;
+  -ms-grid-column: 1;
+  grid-area: m-emo6;
+}
+
+.m-emo7 {
+  -ms-grid-row: 9;
+  -ms-grid-column: 2;
+  grid-area: m-emo7;
+}
